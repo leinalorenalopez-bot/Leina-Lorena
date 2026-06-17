@@ -1,0 +1,21 @@
+{
+  "collections": {
+    "users": {
+      "schema": {
+        "email": "string",
+        "createdAt": "timestamp"
+      },
+      "subcollections": {
+        "children": {
+          "schema": {
+            "id": "string",
+            "name": "string",
+            "ageAtProfile": "number",
+            "level": "string",
+            "drawings": "array"
+          }
+        }
+      }
+    }
+  }
+}

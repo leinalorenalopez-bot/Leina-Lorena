@@ -1,0 +1,11 @@
+{
+  "name": "Trazo & Dato",
+  "description": "Prototipo de IA multimodal para la valoración de dibujos infantiles y retroalimentación guiada basada en las teorías del desarrollo de Lowenfeld y Kellogg.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "vision",
+    "chat"
+  ]
+}

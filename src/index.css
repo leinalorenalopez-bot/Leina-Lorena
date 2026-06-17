@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Crimson Pro", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-bg: #FAF9FF; /* Fresh, luminous creative white with subtle lilac undertones */
+  --color-brand-text: #1E1B4B; /* Deep, high-contrast indigo navy for max readability */
+  --color-brand-primary: #6366F1; /* Extremely vibrant Indigo/Violet for energetic action buttons and focus areas */
+  --color-brand-secondary: #EEF2FF; /* Soft energetic pastel lavender-blue background for active tabs and sections */
+  --color-brand-border: #D8DBFF; /* Cheerful, soft amethyst outline border */
+  --color-brand-accent: #FF3B70; /* Luminous, vibrant neon pink-magenta for creative sparkles and active visual highlights */
+  --color-brand-muted: #6B7280; /* Clean grey for support texts */
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text font-serif;
+  }
+}
+
+#printable-report {
+  display: none;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  #root > :not(#printable-report) {
+    display: none !important;
+  }
+  #printable-report {
+    display: block !important;
+    width: 100% !important;
+    font-family: "Inter", sans-serif !important;
+  }
+}
+
